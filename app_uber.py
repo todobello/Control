@@ -21,7 +21,7 @@ def load_data(nrows):
   lowercase = lambda x: str(x).lower()
   data.rename(lowercase, axis="columns", inplace=True)
   data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
-  RETURN DATA
+  return data
 
 
 data_load_state = st.text("Loading data...")
