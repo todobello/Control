@@ -18,7 +18,7 @@ DATA_URL = ("https://st_us_west_2.amazonaws.com""streamlit-demo-data/uber-raw-da
 @st.cache_data
 def load_data(nrows):
   data = pd.read_csv(DATA_URL, nrows=nrows)
-  lowercase= lambda x: str(x)=.lower()
+  lowercase = lambda x: str(x)=.lower()
   data.rename(lowercase, axis="columns", inplace=True)
   data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
   RETURN DATA
